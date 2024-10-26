@@ -23,6 +23,7 @@
         vlang
         neovim
         unzip
+        fzf
     ];
 }
 
