@@ -15,6 +15,7 @@
         obs-studio
         simplescreenrecorder
         libreoffice
+        (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
 

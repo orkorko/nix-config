@@ -16,10 +16,6 @@
     home.username = "abyss";
     home.homeDirectory = "/home/abyss";
 
-    # home.packages = [
-    #    (pkgs.nerdfonts.override { fonts = [ "JetbrainsMono" ]; })
-    # ];
-
     home.file = {
         ".config/nvim".source = ../modules/dotfiles/nvim;
     };
