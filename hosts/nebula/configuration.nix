@@ -26,9 +26,6 @@
 		isNormalUser = true;
 		description = "abyss";
 		extraGroups = [ "input" "dbus" "networkmanager" "wheel" ];
-		packages = with pkgs; [
-			polybar
-		];
 	};
 
 	nixpkgs.config.allowUnfree = true;

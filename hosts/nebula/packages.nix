@@ -1,13 +1,13 @@
 { config, pkgs, inputs, ... }:
 {
-	environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs; [
         home-manager
-	wget
+        wget
         curl
         cowsay
-	fastfetch
-	cava
-	htop
+        fastfetch
+        cava
+        htop
         ripgrep
         gcc
         tree
@@ -22,7 +22,7 @@
         nodejs
         vlang
         neovim
-     	unzip
-	];
+        unzip
+    ];
 }
 
