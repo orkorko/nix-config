@@ -20,6 +20,7 @@ require("lazy").setup({
   spec = {
       "ThePrimeagen/harpoon",
       "lewis6991/gitsigns.nvim",
+      "ellisonleao/gruvbox.nvim",
       { "wakatime/vim-wakatime", lazy = false },
       {
           "nvim-telescope/telescope.nvim", tag = "0.1.8",

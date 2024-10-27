@@ -38,6 +38,5 @@ local gitsigns = require("gitsigns")
 gitsigns.setup()
 vim.opt.signcolumn = "yes"
 vim.cmd("hi SignColumn ctermbg=238")
-
-
+vim.cmd("colorscheme gruvbox")
 
