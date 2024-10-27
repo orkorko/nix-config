@@ -17,6 +17,7 @@
         libreoffice
         protonup-qt
         p7zip
+        liferea
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
