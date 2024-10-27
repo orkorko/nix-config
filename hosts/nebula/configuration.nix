@@ -13,6 +13,8 @@
         ../../modules/locale.nix
         ../../modules/gnupg.nix
         ../../modules/steam.nix
+        ../../modules/scripts/scrap/default.nix
+        ../../modules/cron.nix
     ];
 
     system.stateVersion = "23.05";

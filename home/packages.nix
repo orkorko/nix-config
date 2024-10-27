@@ -18,6 +18,8 @@
         protonup-qt
         p7zip
         liferea
+        element-desktop
+        fractal
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
