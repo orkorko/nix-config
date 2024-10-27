@@ -24,6 +24,11 @@
         neovim
         unzip
         fzf
+        lutris
+        wineWowPackages.stable
+        winetricks
+        wineWowPackages.waylandFull
+        adwaita-icon-theme-legacy
     ];
 }
 

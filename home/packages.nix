@@ -15,6 +15,8 @@
         obs-studio
         simplescreenrecorder
         libreoffice
+        protonup-qt
+        p7zip
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
