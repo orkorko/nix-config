@@ -20,6 +20,14 @@
         liferea
         element-desktop
         fractal
+        claws-mail
+        neomutt
+        notmuch
+        mutt-wizard
+        pass
+        isync
+        hexedit
+        rxfetch
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
