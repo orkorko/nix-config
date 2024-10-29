@@ -2,22 +2,24 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- plugins
+require("plugins");
+
 -- opts
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.wrap = false
+vim.o.hlsearch = false
 
 -- appearance
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "80"
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:block"
+vim.cmd("colorscheme gruvbox")
 
 -- keymaps
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>");
-
--- plugins
-require("plugins");
 
 -- telescope
 local telescope_builtin = require("telescope.builtin")
@@ -37,6 +39,4 @@ vim.keymap.set("n", "<C-q>", harpoon_ui.toggle_quick_menu)
 local gitsigns = require("gitsigns")
 gitsigns.setup()
 vim.opt.signcolumn = "yes"
-vim.cmd("hi SignColumn ctermbg=238")
-vim.cmd("colorscheme gruvbox")
 
