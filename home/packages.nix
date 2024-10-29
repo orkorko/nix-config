@@ -27,7 +27,6 @@
         pass
         isync
         hexedit
-        rxfetch
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 }
