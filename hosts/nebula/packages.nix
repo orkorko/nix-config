@@ -26,8 +26,8 @@
         fzf
         lutris
         wineWowPackages.stable
-        winetricks
         wineWowPackages.waylandFull
+        winetricks
         adwaita-icon-theme-legacy
     ];
 }
