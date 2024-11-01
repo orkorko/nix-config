@@ -19,6 +19,7 @@
         shellAliases = {
             vim = "nvim";
             vi = "nvim";
+            gho = ''xdg-open $(git remote get-url origin | sed "s/.*://" | awk '{print "https://github.com/" $0}')'';
         };
     };
 }
