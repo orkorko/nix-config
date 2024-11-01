@@ -36,6 +36,23 @@
         size = 8 * 1024;
     }];
   
+    documentation.man = {
+        man-db.enable = false;
+        mandoc.enable = true;
+    };
+
+    services.openssh = {
+        enable = true;
+        ports = [ 22 ];
+        settings = {
+            PasswordAuthentication = true;
+            AllowUsers = null;
+            UseDns = true;
+            X11Forwarding = false;
+            PermitRootLogin = "prohibit-password";
+        };
+    };
+
     services.printing.enable = true;
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;

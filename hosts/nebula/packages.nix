@@ -29,6 +29,9 @@
         wineWowPackages.waylandFull
         winetricks
         adwaita-icon-theme-legacy
+        pkgs.man-pages
+        pkgs.man-pages-posix
+        openssh
     ];
 }
 
