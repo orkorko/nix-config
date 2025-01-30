@@ -207,3 +207,5 @@
 (global-display-line-numbers-mode)
 (vertico-mode)
 (global-wakatime-mode)
+(display-battery-mode)
+(display-time-mode)
