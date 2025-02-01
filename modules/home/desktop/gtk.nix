@@ -1,9 +1,7 @@
 { config, pkgs, hm, ... }:
 let
   gtkCss = ''
-    /* No (default) title bar on wayland */
     headerbar.default-decoration {
-      /* You may need to tweak these values depending on your GTK theme */
       margin-bottom: 50px;
       margin-top: -100px;
     }
@@ -33,6 +31,7 @@ in with config.theme; {
     gtk3.extraCss = gtkCss;
     gtk4.extraCss = gtkCss;
     iconTheme = icons;
+    cursorTheme = cursor;
 
     font = with config.theme.font; {
       inherit (sans) name package;
