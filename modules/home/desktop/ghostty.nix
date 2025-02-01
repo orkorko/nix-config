@@ -7,6 +7,7 @@
       font-family = font.mono.name;
       confirm-close-surface = false;
       quit-after-last-window-closed = false;
+      clipboard-paste-protection = false;
       gtk-wide-tabs = false;
       gtk-titlebar = false;
       window-decoration = false;
