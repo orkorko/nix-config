@@ -14,10 +14,10 @@
     mpv
     zulip
     discord
-    chromium
     nicotine-plus
     feh
     nitrogen
     wlroots
+    zathura
   ];
 }
