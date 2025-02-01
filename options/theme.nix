@@ -17,5 +17,9 @@ in {
 
     icons.name = "Gruvbox-Plus-Dark";
     icons.package = pkgs.gruvbox-plus-icons;
+
+    cursor.name = "Capitaine Cursors";
+    cursor.size = 20;
+    cursor.package = pkgs.capitaine-cursors;
   }));
 }
