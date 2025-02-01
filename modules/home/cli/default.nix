@@ -1,11 +1,10 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
     ./nushell
     ./gnupg.nix
     ./git.nix
     ./bat.nix
-    ./rg.nix
+    ./ripgrep.nix
   ];
 
   home.packages = with pkgs; [
