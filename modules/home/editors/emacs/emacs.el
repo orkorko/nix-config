@@ -175,6 +175,11 @@
 (use-package nushell-mode
   :ensure t)
 
+(use-package git-gutter
+  :ensure t
+  :config
+  (global-git-gutter-mode +1))
+
 ;; we are using C-w for window management
 (global-set-key (kbd "M-d") #'kill-region)
 (setq meow--kbd-kill-region "M-d")

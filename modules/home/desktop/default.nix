@@ -1,12 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, config, lib, ... }: {
   imports = [
     ./river
-    ./emacs
     ./gtk.nix
     ./librewolf.nix
     ./ghostty.nix
-    ./dunst.nix
-    ./nvim.nix
   ];
 
   home.packages = with pkgs; [
