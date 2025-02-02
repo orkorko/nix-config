@@ -18,5 +18,7 @@
     yt-dlp
     tmux
     fd
+    wakatime-cli
+    wakatime
   ];
 }
