@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     liferea
     hexedit
+    hexchat
     krita
     gimp
     mpv
@@ -17,7 +18,16 @@
     nicotine-plus
     feh
     nitrogen
-    wlroots
     zathura
+    pavucontrol
+    zed-editor
+    chromium
+    pcmanfm
+    obsidian
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    liberation_ttf
+    brave
   ];
 }
