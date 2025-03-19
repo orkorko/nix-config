@@ -13,6 +13,7 @@
       window-decoration = false;
       cursor-style = "block";
       cursor-style-blink = false;
+      shell-integration-features = "sudo";
       keybind = (mapAttrsToList (name: value: "ctrl+shift+${name}=${value}") {
         left_bracket = "goto_split:previous";
         right_bracket = "goto_split:next";
