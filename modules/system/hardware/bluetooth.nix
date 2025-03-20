@@ -1,9 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, ... }: with config; {
   hardware.bluetooth = {
-    enable = config.isDesktop;
+    enable = isDesktop;
     powerOnBoot = false;
     settings = { General = { Enable = "Source,Sink,Media,Socket"; }; };
   };
 
-  services.blueman.enable = config.isDesktop;
+  services.blueman.enable = isDesktop;
 }
