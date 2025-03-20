@@ -1,4 +1,4 @@
-_: {
+{ lib, config, ... }: lib.mkIf config.isDesktop {
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
