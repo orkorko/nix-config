@@ -13,6 +13,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
     themes.url = "github:RGBCube/ThemeNix";
     emacs-overlay.url = "github:nix-community/emacs-overlay";
+    agenix.url = "github:ryantm/agenix";
   };
   outputs = { self, ... }@inputs:
     let
