@@ -12,7 +12,7 @@
       background = base00;
       foreground = base05;
       alignment = "left";
-      font = "${font.mono.name} ${toString font.size.normal}";
+      font = "${font.sans.name} ${toString font.size.normal}";
       origin = "top-right";
     };
     settings.urgency_low = {
