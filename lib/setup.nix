@@ -1,4 +1,4 @@
-{ self, nixvim, themes, ... }@inputs:
+{ self, nixpkgs, home-manager, nixvim, agenix, themes, ... }@inputs:
 let
   lib' = import ./. inputs.nixpkgs.lib;
   lib = inputs.nixpkgs.lib.extend (self: super: inputs.home-manager.lib // lib');
@@ -7,17 +7,17 @@ let
 in {
   mkHost = { 
     hostname,
-    isDesktop ? false,
     stateVersion, 
     username,
+    isDesktop ? false,
     pkgs ? inputs.nixpkgs,
     system ? "x86_64-linux"
   }:
     with pkgs; lib.nixosSystem {
       specialArgs = {
-        inherit self inputs outputs stateVersion username hostname lib system;
+        inherit self inputs outputs stateVersion username hostname lib system agenix;
       };
-      pkgs = import inputs.nixpkgs {
+      pkgs = import nixpkgs {
           inherit system;
           hostPlatform = lib.mkDefault system;
           overlays = [ (import inputs.emacs-overlay) ];
@@ -25,12 +25,13 @@ in {
       };
       modules = [
         (desktopOption isDesktop)
-        inputs.home-manager.nixosModules.home-manager
+        agenix.nixosModules.default
+        home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {
-            inherit self outputs stateVersion hostname username nixvim themes;
+            inherit self outputs stateVersion hostname username nixvim themes isDesktop;
           };
           home-manager.users.${username} = {
             imports = [
