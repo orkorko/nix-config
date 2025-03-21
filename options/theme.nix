@@ -3,8 +3,8 @@
 let base = themes.raw.gruvbox-dark-hard;
 in {
   options.theme = lib.mkValue (themes.custom (base // {
-    margin = 0;
-    padding = 6;
+    margin = 2;
+    padding = 4;
 
     font.size.normal = 12;
     font.size.big = 16;
@@ -15,8 +15,8 @@ in {
     font.mono.name = "Iosevka Nerd Font";
     font.mono.package = pkgs.nerd-fonts.iosevka;
 
-    icons.name = "Gruvbox-Plus-Dark";
-    icons.package = pkgs.gruvbox-plus-icons;
+    icons.name = "Gruvbox-dark-icons";
+    icons.package = pkgs.gruvbox-dark-icons-gtk;
 
     cursor.name = "Capitaine Cursors";
     cursor.size = 20;
