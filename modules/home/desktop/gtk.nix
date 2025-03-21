@@ -16,7 +16,9 @@ let
 '';
 
 in with config.theme; {
-  dconf.enable = false;
+  home.packages = [ pkgs.dconf ];
+  
+  dconf.enable = true;
 
   fonts.fontconfig = {
     enable = true;
@@ -26,6 +28,11 @@ in with config.theme; {
     };
   };
 
+  home.pointerCursor = with cursor; {
+    inherit name size package;
+    gtk.enable = true;
+  };
+    
   gtk = {
     enable = true;
     gtk3.extraCss = gtkCss;
@@ -33,7 +40,7 @@ in with config.theme; {
     iconTheme = icons;
     cursorTheme = cursor;
 
-    font = with config.theme.font; {
+    font = with font; {
       inherit (sans) name package;
       size = size.normal;
     };
