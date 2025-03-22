@@ -95,9 +95,9 @@ in with config.theme; {
         "Super P" = "spawn fuzzel";
 
         "Super Apostrophe" =
-          ''spawn "pactl -- set-sink-volume @DEFAULT_SINK@ +5%"'';
+          ''spawn "wpctl set-volume @DEFAULT_SINK@ 5%+"'';
         "Super+Shift Apostrophe" =
-          ''spawn "pactl -- set-sink-volume @DEFAULT_SINK@ -5%"'';
+          ''spawn "wpctl set-volume @DEFAULT_SINK@ 5%-"'';
 
         "Super Space" = "toggle-float";
         "Super F" = "toggle-fullscreen";
