@@ -6,5 +6,6 @@ _: {
     ./networking.nix
     ./power-management.nix
     ./miniflux.nix
+    ./snap.nix
   ];
 }
