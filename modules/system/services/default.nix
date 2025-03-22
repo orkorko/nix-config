@@ -5,5 +5,6 @@ _: {
     ./pipewire.nix
     ./networking.nix
     ./power-management.nix
+    ./miniflux.nix
   ];
 }
