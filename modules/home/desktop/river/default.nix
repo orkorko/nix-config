@@ -1,22 +1,22 @@
 { config, pkgs, lib, ... }:
-
 let
   shl = x: if x <= 0 then 1 else 2 * (shl (x - 1));
   allTags = (shl 32) - 1;
-  
 in with config.theme; {
-  imports = [
-    ./dunst.nix
-    ./fuzzel.nix
-  ];
+  imports = [ ./dunst.nix ./fuzzel.nix ];
   
-  home.packages = [
-    pkgs.brightnessctl
-    pkgs.swaybg
-    pkgs.xfce.xfce4-power-manager
-    pkgs.gcr
-    cursor.package
-  ];
+  home.packages = with pkgs; [
+    brightnessctl
+    swaybg
+    waypaper
+    xfce.xfce4-power-manager
+    gcr
+    wlr-randr
+    wlroots
+    waybar
+    lxappearance
+    sfwbar
+  ] ++ [ cursor.package ];
 
   services.gnome-keyring.enable = true;
 
@@ -38,17 +38,17 @@ in with config.theme; {
       "xcursor-theme" = "${cursor.name} ${toString cursor.size}";
 
       spawn = [
-        "rivertile"
-        "emacs --daemon"
+        "'rivertile -view-padding ${toString padding} -outer-padding ${
+          toString margin
+        }'"
+        "sfwbar"
         "kwalletd6"
         "dunst"
         "xfce4-power-manager"
         "mpd"
-        "rivertile -view-padding ${toString padding} -outer-padding ${
-          toString padding
-        }"
-        "gnome-keyring-daemon --start --components=secrets,ssh"
+        "'gnome-keyring-daemon --start --components=secrets,ssh'"
         "'nu -c 'sleep 5sec; wlr-randr --output \"HDMI-A-1\" --mode 1920x1080@100''"
+        "'sh -c \"sleep 5; emacs --daemon\"'"
       ];
 
       map.normal = {
