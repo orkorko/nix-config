@@ -47,7 +47,9 @@ in {
       description = username;
       hashedPasswordFile = config.age.secrets.${username}.path;
       extraGroups = [ "input" "networkmanager" "wheel" "dbus" ]
-        ++ lib.optionals config.isDesktop [ "audio" "video" "pipewire" ];
+        ++ lib.optionals config.isDesktop [ "adbusers" "audio" "video" "pipewire" ];
     };
   };
+  
+  programs.adb = { enable = config.isDesktop; };
 }
