@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [ ./clang.nix ./python.nix ];
+
   home.packages = with pkgs; [
     ghc
     go
@@ -14,5 +15,7 @@
     hyperfine
     julia
     nixfmt-classic
+    cabal-install
+    agda
   ];
 }
