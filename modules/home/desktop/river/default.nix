@@ -110,7 +110,7 @@ in with config.theme; {
         "Super+Shift Slash" = ''spawn "brightnessctl set 5%-" '';
         "Super Slash" = ''spawn "brightnessctl set 5%+" '';
       } // lib.foldl' (acc: x:
-        let tag = shl x;
+        let tag = shl (x - 1);
         in acc // {
           "Super ${toString x}" = "set-focused-tags ${toString tag}";
           "Super+Shift ${toString x}" = "set-view-tags ${toString tag}";
