@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 let
   emacsPkgs = epkgs: [
     epkgs.use-package
@@ -13,8 +13,9 @@ let
     epkgs.nixfmt
     epkgs.magit
     epkgs.nushell-mode
+    epkgs.agda2-mode
   ];
-in {
+in lib.mkIf config.isDesktop {
   home.packages = [
     (pkgs.emacsWithPackagesFromUsePackage {
       package = pkgs.emacs;
@@ -23,6 +24,7 @@ in {
       alwaysEnsure = true;
       extraEmacsPackages = emacsPkgs;
     })
+    pkgs.fzf
   ];
 
   services.emacs = {

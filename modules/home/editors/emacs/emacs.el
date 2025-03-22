@@ -175,6 +175,9 @@
 (use-package nushell-mode
   :ensure t)
 
+(use-package agda2-mode
+  :ensure t)
+
 (use-package git-gutter
   :ensure t
   :config
@@ -198,6 +201,8 @@
 (setq truncate-partial-width-windows nil)
 (setq display-line-numbers-background nil)
 (setq ring-bell-function 'ignore)
+(setopt display-fill-column-indicator-column 80)
+(setq consult-fd-args "fzf")
 
 (set-face-attribute 'default nil
                     :family "Iosevka Nerd Font" 
@@ -214,3 +219,10 @@
 (global-wakatime-mode)
 (display-battery-mode)
 (display-time-mode)
+
+; agda
+(setq auto-mode-alist
+   (append
+     '(("\\.agda\\'" . agda2-mode)
+       ("\\.lagda.md\\'" . agda2-mode))
+     auto-mode-alist))
