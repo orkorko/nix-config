@@ -27,6 +27,11 @@
           isDesktop = true;
           stateVersion = "23.05";
         };
+        anu = setup.mkHost {
+          hostname = "anu";
+          username = "a";
+          stateVersion = "23.11";
+        };
       };
     };
 }
