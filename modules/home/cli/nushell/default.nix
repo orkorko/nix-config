@@ -3,10 +3,13 @@
 
   home.packages = with pkgs; [ fish carapace ];
 
-  home.activation.setup-carapace = lib.hm.dag.entryAfter [ "installPackages" "writeBoundary" ] ''
-      mkdir -p ${config.home.homeDirectory}/.cache/carapace
-      echo "$(carapace _carapace nushell)" > ${config.home.homeDirectory}/.cache/carapace/init.nu
-    '';
+  home.activation = {
+    setup-carapace =
+      lib.hm.dag.entryAfter [ "installPackages" "writeBoundary" ] ''
+        mkdir -p ${config.home.homeDirectory}/.cache/carapace
+        echo "$(${pkgs.carapace}/bin/carapace _carapace nushell)" > ${config.home.homeDirectory}/.cache/carapace/init.nu
+      '';
+  };
 
   programs.nushell = {
     enable = true;
@@ -23,9 +26,7 @@
         max_results = 100;
       };
     };
-    environmentVariables = {
-      EDITOR = "hx";
-    };
+    environmentVariables = { EDITOR = "hx"; };
     extraLogin = lib.mkIf config.isDesktop ''
       if (tty) == '/dev/tty1' {
          exec river
