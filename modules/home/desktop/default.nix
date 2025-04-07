@@ -23,6 +23,7 @@
     zed-editor
     chromium
     pcmanfm
+    nautilus
     obsidian
     noto-fonts
     noto-fonts-cjk-sans

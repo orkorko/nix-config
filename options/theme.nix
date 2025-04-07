@@ -15,11 +15,11 @@ in {
     font.mono.name = "Iosevka Nerd Font";
     font.mono.package = pkgs.nerd-fonts.iosevka;
 
-    icons.name = "Gruvbox-dark-icons";
-    icons.package = pkgs.gruvbox-dark-icons-gtk;
+    icons.name = "Adwaita";
+    icons.package = pkgs.adwaita-icon-theme;
 
-    cursor.name = "Capitaine Cursors";
+    cursor.name = "Adwaita";
     cursor.size = 20;
-    cursor.package = pkgs.capitaine-cursors;
+    cursor.package = pkgs.adwaita-icon-theme;
   }));
 }

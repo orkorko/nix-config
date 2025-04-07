@@ -9,8 +9,8 @@
       quit-after-last-window-closed = false;
       clipboard-paste-protection = false;
       gtk-wide-tabs = false;
-      gtk-titlebar = false;
-      window-decoration = false;
+      # gtk-titlebar = false;
+      # window-decoration = false;
       cursor-style = "block";
       cursor-style-blink = false;
       shell-integration-features = "sudo";
