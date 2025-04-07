@@ -8,5 +8,6 @@ _: {
     ./miniflux.nix
     ./snap.nix
     ./virtualization.nix
+    ./desktop.nix
   ];
 }
