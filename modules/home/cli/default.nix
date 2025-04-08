@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./nushell
-    ./gnupg.nix
     ./git.nix
     ./bat.nix
     ./ripgrep.nix
@@ -20,5 +19,7 @@
     fd
     wakatime-cli
     wakatime
+    util-linux
+    exfatprogs
   ];
 }
