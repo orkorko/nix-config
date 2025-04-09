@@ -29,5 +29,21 @@
     noto-fonts-emoji
     liberation_ttf
     brave
+    appimage-run
+    mtpfs
+    libmtp
+    gvfs
+    qemu_full
+    virt-manager
+    quickemu
+    spice
+    spice-protocol
+    spice-vdagent
+    spice-gtk
+    gnome-tweaks
+    chrome-gnome-shell
+    usbredir
+    virt-viewer
+    telegram-desktop
   ];
 }

@@ -7,5 +7,6 @@ _: {
     ./power-management.nix
     ./miniflux.nix
     ./snap.nix
+    ./virtualization.nix
   ];
 }
