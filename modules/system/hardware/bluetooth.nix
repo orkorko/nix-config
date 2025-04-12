@@ -1,9 +1,14 @@
-{ config, ... }: with config; {
+{ lib, config, ... }:
+lib.mkIf config.isDesktop {
   hardware.bluetooth = {
-    enable = isDesktop;
-    powerOnBoot = false;
-    settings = { General = { Enable = "Source,Sink,Media,Socket"; }; };
+    enable = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
+      };
+    };
   };
 
-  services.blueman.enable = isDesktop;
+  services.blueman.enable = true;
 }
