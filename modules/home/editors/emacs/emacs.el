@@ -178,10 +178,16 @@
 (use-package agda2-mode
   :ensure t)
 
+(use-package racket-mode
+  :ensure t)
+
 (use-package git-gutter
   :ensure t
   :config
   (global-git-gutter-mode +1))
+
+(use-package rust-mode
+  :ensure t)
 
 ;; we are using C-w for window management
 (global-set-key (kbd "M-d") #'kill-region)
@@ -190,7 +196,6 @@
 ;; set options
 (setq display-line-numbers-type 'relative)
 (setq custom-file "~/.emacs.custom.el")
-(setq color-column 80)
 (setq inhibit-startup-screen t)
 (setq confirm-non-existent-file-or-buffer nil)
 (setq auto-save-visited-mode -1)
@@ -201,8 +206,11 @@
 (setq truncate-partial-width-windows nil)
 (setq display-line-numbers-background nil)
 (setq ring-bell-function 'ignore)
-(setopt display-fill-column-indicator-column 80)
-(setq consult-fd-args "fzf")
+(setq tab-width 4)
+(setq sh-basic-offset 4)
+(setq sh-indentation 4)
+(setq-default fill-column 80)
+(setq frame-resize-pixelwise t)
 
 (set-face-attribute 'default nil
                     :family "Iosevka Nerd Font" 
@@ -219,6 +227,7 @@
 (global-wakatime-mode)
 (display-battery-mode)
 (display-time-mode)
+(global-display-fill-column-indicator-mode)
 
 ; agda
 (setq auto-mode-alist

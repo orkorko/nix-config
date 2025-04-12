@@ -14,6 +14,8 @@ let
     epkgs.magit
     epkgs.nushell-mode
     epkgs.agda2-mode
+    epkgs.racket-mode
+    epkgs.rust-mode
   ];
 in lib.mkIf config.isDesktop {
   home.packages = [

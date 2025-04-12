@@ -17,5 +17,8 @@
     nixfmt-classic
     cabal-install
     agda
+    racket
+    rustc
+    cargo
   ];
 }
