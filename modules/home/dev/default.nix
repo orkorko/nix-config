@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ lib, pkgs, config, ... }:
 {
   imports = [ ./clang.nix ./python.nix ];
 
-  home.packages = with pkgs; [
+  home.packages = lib.optionals config.isDesktop (with pkgs; [
     ghc
     go
     zig
@@ -20,5 +20,5 @@
     racket
     rustc
     cargo
-  ];
+  ]);
 }
