@@ -46,5 +46,6 @@
     usbredir
     virt-viewer
     telegram-desktop
+    nextcloud-client
   ];
 }
