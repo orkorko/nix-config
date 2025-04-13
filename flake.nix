@@ -27,6 +27,11 @@
           isDesktop = true;
           stateVersion = "23.05";
         };
+        floppy = setup.mkHost {
+          hostname = "floppy";
+          username = "disk";
+          stateVersion = "25.05";
+        };
         anu = setup.mkHost {
           hostname = "anu";
           username = "a";
