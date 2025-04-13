@@ -32,7 +32,7 @@ in {
   };
 
   age = {
-    identityPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    identityPaths = [ "/etc/ssh/ssh_host_ed25519_key" "/home/${username}/.ssh/id" ];
     secrets.${username} = {
       file = ../../secrets/${username}.password.age;
       owner = username;
