@@ -21,5 +21,6 @@
     wakatime
     util-linux
     exfatprogs
+    btop
   ];
 }
